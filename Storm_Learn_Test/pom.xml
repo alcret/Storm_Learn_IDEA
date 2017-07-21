@@ -2,21 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Storm_Learn_IDEA</artifactId>
+        <groupId>Storm_Learn</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Storm_Learn</groupId>
-    <artifactId>Storm_Learn_IDEA</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>Storm_Learn_Test</module>
-    </modules>
-    <dependencies>
+    <artifactId>Storm_Learn_Test</artifactId>
+
+<dependencies>
     <dependency>
         <groupId>org.apache.storm</groupId>
         <artifactId>storm-core</artifactId>
-        <version>0.9.1-incubating</version>
+        <version>0.9.6</version>
     </dependency>
 </dependencies>
-
 </project>
