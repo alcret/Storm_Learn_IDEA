@@ -9,12 +9,11 @@ import storm.trident.spout.ITridentSpout;
 
 public class DiagnosisEventSpout implements ITridentSpout<Long>{
 	
-	SpoutOutputCollector collector;
-	BatchCoordinator<Long> coordinator = new DefaultCoordinator();
-	Emitter<Long> emitter = new DiagnosisEventEmmiter();
+	private SpoutOutputCollector collector;
+	private BatchCoordinator<Long> coordinator = new DefaultCoordinator();
+	private Emitter<Long> emitter = new DiagnosisEventEmmiter();
 
 	public Map getComponentConfiguration() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -23,12 +22,10 @@ public class DiagnosisEventSpout implements ITridentSpout<Long>{
 	}
 
 	public Emitter<Long> getEmitter(String txStateId, Map conf, TopologyContext context) {
-		// TODO Auto-generated method stub
 		return emitter;
 	}
 
 	public Fields getOutputFields() {
-		// TODO Auto-generated method stub
 		return new Fields("event");
 	}
 }
