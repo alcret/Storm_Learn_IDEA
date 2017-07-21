@@ -23,7 +23,9 @@ public class WordCountBolt extends BaseRichBolt{
 		}
 		count++;
 		this.counts.put(word,count);
-		this.collector.emit(new Values(word,count));
+//		this.collector.emit(new Values(word,count));
+		this.collector.emit(tuple,new Values(word,count));
+		this.collector.ack(tuple);
 		
 	}
 
