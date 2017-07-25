@@ -20,6 +20,7 @@ public class SplitSentenceBolt extends BaseRichBolt{
 			this.collector.emit(tuple,new Values(word));
 		}
 		this.collector.ack(tuple);
+//		this.collector.fail(tuple);
 	}
 
 	public void prepare(Map config, TopologyContext context, OutputCollector collector) {
