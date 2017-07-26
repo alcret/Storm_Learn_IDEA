@@ -4,7 +4,6 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.ProducerConfig;
-import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MessageFormatter;
 
 import java.util.Properties;
@@ -64,9 +63,9 @@ public class KafkaAppender extends AppenderBase<ILoggingEvent>{
 
     @Override
     protected void append(ILoggingEvent event) {
-        String payload = this.formatter.format(event);
-        ProducerData<String,String> data = new ProducerData<String,String>(this.topic,payload);
-        this.producer.send(data);
+//        String payload = this.formatter.format(event);
+//        ProducerData<String,String> data = new ProducerData<String,String>(this.topic,payload);
+//        this.producer.send(data);
 
     }
 }
